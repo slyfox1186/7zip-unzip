@@ -11,7 +11,7 @@ PUSHD "%~dp0"
 
 FOR /F "USEBACKQ TOKENS=*" %%G IN (`DIR /S /B *.zip`) DO (
     7z.exe x -y "%%G" -o"%%~dpnG"
-    recycle.exe -f "%%G"
+    DEL /Q "%%G"
 )
 
-TIMEOUT 3 >NUL
+TIMEOUT 1 >NUL
