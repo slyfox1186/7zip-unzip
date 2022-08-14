@@ -2,7 +2,7 @@
 Recursively unzip all zip files in the active directory
 
 * This script requires `wget.exe` or `curl.exe`
-  - I use the latest v1.21.3
+  - I use the latest WGET v1.21.3
   - Download: [wget.exe](https://eternallybored.org/misc/wget/1.21.3/64/wget.exe)
 
 ## Command Lines
