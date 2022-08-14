@@ -7,11 +7,17 @@ TITLE RECURSIVELY UNZIP
 
 PUSHD "%~dp0"
 
+ECHO CD: "%~dp0"
+ECHO=
+PAUSE
+GOTO :EOF
+
 :----------------------------------------------------------------------------------------------
 
-FOR /F "USEBACKQ TOKENS=*" %%G IN (`DIR /S /B *.zip`) DO ECHO 7z.exe e "%%G" & CLS
-TIMEOUT 3 >NUL
+FOR /F "USEBACKQ TOKENS=*" %%G IN (`DIR /S /B *.zip`) DO ECHO 7z.exe x "%%G"
 
 :----------------------------------------------------------------------------------------------
 
-START "" cmd.exe /D /C DEL /Q "%0"
+ECHO=
+PAUSE
+REM TIMEOUT 3 >NUL
