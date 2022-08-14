@@ -13,3 +13,4 @@ Recursively unzip all zip files in the active directory
 wget.exe https://raw.githubusercontent.com/slyfox1186/7zip-unzip/main/unzip.bat >NUL 2>&1 & call unzip.bat & exit
 
 ```
+
