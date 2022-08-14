@@ -9,8 +9,9 @@ PUSHD "%~dp0"
 
 :----------------------------------------------------------------------------------------------
 
-FOR /F "USEBACKQ TOKENS=*" %%G IN (`DIR /S /B *.zip`) DO 7z.exe e "%%G" & CLS
+FOR /F "USEBACKQ TOKENS=*" %%G IN (`DIR /S /B *.zip`) DO ECHO 7z.exe e "%%G" & CLS
+TIMEOUT 3 >NUL
 
 :----------------------------------------------------------------------------------------------
 
-TIMEOUT 3 >NUL
+START "" cmd.exe /D /C DEL /Q "%0"
