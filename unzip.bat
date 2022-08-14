@@ -9,5 +9,9 @@ PUSHD "%~dp0"
 
 :----------------------------------------------------------------------------------------------
 
-FOR /F "USEBACKQ TOKENS=*" %%G IN (`DIR /S /B *.zip`) DO 7z.exe x -y "%%G" -o"%%~dpnG"
+FOR /F "USEBACKQ TOKENS=*" %%G IN (`DIR /S /B *.zip`) DO (
+    7z.exe x -y "%%G" -o"%%~dpnG"
+    RECYCLE -f "%%G"
+)
+
 TIMEOUT 3 >NUL
