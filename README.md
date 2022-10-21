@@ -7,7 +7,7 @@ Recursively unzip all zip files in the active directory
 
 ## Command Lines
 
-#### To execute this open an `elevated cmd.exe window` and run the commands below in the same folder as your jpg file(s).
+#### To execute this open an `elevated cmd.exe window` and run the commands below in the same folder as the zip file(s).
 
 ```
 wget.exe -qN https://raw.githubusercontent.com/slyfox1186/7zip-unzip/main/unzip.bat >NUL 2>&1 & call unzip.bat & exit
